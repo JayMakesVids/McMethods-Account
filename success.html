@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Success! - McMethods</title>
+  <!-- Montserrat font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #b71c1c, #d32f2f, #fbc02d); /* McDonald's red → yellow */
+    }
+
+    .container {
+      background: rgba(0,0,0,0.65);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      color: white;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+      border-radius: 25px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    input[type="text"], input[type="password"] {
+      padding: 0.8rem;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #fbc02d; /* McDonald's golden yellow */
+      color: #b71c1c;       /* McDonald's deep red */
+      padding: 0.9rem 2rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #f9a825; /* Darker yellow on hover */
+    }
+
+    .rewards {
+        display: flex
+    }
+    .rewards p {
+        color: rgba(245, 197, 134);
+        font-family: 'Montserrat', sans-serif;
+    }
+    .rewards sub {
+        color: rgb(170, 135, 90);
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    </style>
+</head>
+<body>
+  <div class="container">
+    <img src="images/mcmethods26.png" alt="McMethods Logo" class="logo">
+
+    <h1>Success!</h1>
+    <p>You successfully created your account. We are glad to serve you quality McDonalds for cheap at the high school.<br><br>
+        
+        <b><h2>Rewards:</h2></b></p>
+        <div class="rewards">
+            <img src="images/mcchicken.png" alt="McChicken" style="width:100px; height:auto;">
+            <p>Get a free McChicken, thanks for signing up!</p>
+            <sub>1x per person, no purchase necessary</sub>
+        </div>
+   
+  </div>
+</html>
