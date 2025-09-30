@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order - McMethods</title>
+  <!-- Montserrat font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #b71c1c, #d32f2f, #fbc02d); /* McDonald's red → yellow */
+    }
+
+    .container {
+      background: rgba(0,0,0,0.65);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      color: white;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+      border-radius: 25px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    a.button {
+      text-decoration: none;
+      background: #fbc02d; /* McDonald's golden yellow */
+      color: #b71c1c;       /* McDonald's deep red */
+      padding: 0.9rem 2rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    a.button:hover {
+      background: #fdd835; /* Slightly lighter yellow on hover */
+    }
+    .button-container button {
+      background: #fbc02d; /* McDonald's golden yellow */
+      color: #b71c1c;       /* McDonald's deep red */
+      padding: 0.9rem 2rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+      width: 100%;
+    }
+  </style>
+  <style>
+    .button-container {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: auto;
+    }
+    .button-container button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      width: auto;
+    }
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 300px;
+      width: 90%;
+      color: white;
+      position: relative;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button id="stuck-btn">Stuck?</button>
+  </div>
+  <iframe src="https://anonymous-chat-room-eight.vercel.app/McMethods" style="width:100%; height:75vh; border:none; border-radius:5%"></iframe>
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-btn">&times;</button>
+      <h2>Instructions</h2>
+      <ul>
+        <li>Disable Microphone</li>
+        <li>Enter Username and Password</li>
+        <li>Press Go, then click the Chat icon and wait for a response.</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    const btn = document.getElementById('stuck-btn');
+    const modal = document.getElementById('modal-overlay');
+    const closeBtn = document.querySelector('.close-btn');
+    btn.addEventListener('click', () => modal.style.display = 'flex');
+    closeBtn.addEventListener('click', () => modal.style.display = 'none');
+    modal.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+- [x] Fix HTML structure: Move button-container inside <body>
+- [x] Update CSS: Make "Stuck?" button smaller and position fixed in top left
+- [x] Add modal HTML: Insert modal overlay and content divs inside body
+- [x] Add CSS for modal: Style overlay and modal content
+- [x] Add JavaScript: Implement show/hide modal on button click, close on X or outside click
