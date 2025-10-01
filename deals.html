@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+<meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>McMethods Account Portal</title>
+  <title>Deals - McMethods</title>
   <!-- Montserrat font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -14,7 +14,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
       background: linear-gradient(135deg, #b71c1c, #d32f2f, #fbc02d); /* McDonald's red → yellow */
     }
 
@@ -46,64 +45,49 @@
 
     .button-container {
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      gap: 0.5rem;
-      width: 100%;
-      margin-top: auto;
-    }
-
-    .vertical-buttons {
-      display: flex;
       flex-direction: column;
       gap: 1rem;
-      align-items: center;
-    }
-
-    .vertical-buttons a.button {
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
+      width: 100%;
     }
 
     a.button {
       text-decoration: none;
       background: #fbc02d; /* McDonald's golden yellow */
       color: #b71c1c;       /* McDonald's deep red */
-      padding: 0.5rem 1rem;
+      padding: 0.9rem 2rem;
       border-radius: 10px;
-      font-size: 1rem;
-      font-weight: 600;
-      transition: 0.25s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-      text-align: center;
-      display: inline-block;
+      font-size: 1.2rem;
+      font-weight: 700;
     }
-
-    a.button:hover {
-      background: #ffd54f;
-      transform: scale(1.05);
+    .rewards {
+        display: flex
+    }
+    .rewards p {
+        color: rgba(245, 197, 134);
+        font-family: 'Montserrat', sans-serif;
+    }
+    .rewards sub {
+        color: rgb(170, 135, 90);
+        font-family: 'Montserrat', sans-serif;
     }
   </style>
-</head>
-<body>
-  <div class="container">
-    <img src="images/mcmethods26.png" alt="McMethods Logo" class="logo">
-
-    <!-- Title -->
-    <h1>Welcome to McMethods</h1>
-
-    <!-- Vertical Buttons -->
-    <div class="vertical-buttons">
-      <a class="button" href="#">Deals</a>
-      <a class="button" href="order.html">Order</a>
-    </div>
-
-    <!-- Buttons -->
-    <div class="button-container">
-      <a class="button" href="login.html" style="text-align: center;">Log in</a>
-      <a class="button" href="signup.html">Create Account</a>
-      <a class="button" href="reset.html">Reset Password</a>
-    </div>
-  </div>
-</body>
 </html>
+<body>
+    <div class="container">
+        <img src="images/mcmethods26.png" alt="McMethods Logo" class="logo">
+    
+        <b><h2>Deals:</h2></b></p>
+        <div class="rewards">
+            <img src="images/mcchicken.png" alt="McChicken" style="width:100px; height:auto;">
+            <p>Get a free McChicken, thanks for signing up!</p>
+            <sub>1x per person, no purchase necessary<br>Exp:11/5</sub>
+            
+        </div>
+        <div class="rewards">
+            <img src="images/mcgriddle.png" alt="McGriddle" style="width:100px; height:auto;">
+            <p>$2.00 McGriddle</p>
+            <sub>2x per person per day<br>Exp:11/1</sub>
+        </div>
+</body>
+<script type="text/javascript" src="https://www.authpro.com/auth/McMethods/?action=pp">
+  </script>
