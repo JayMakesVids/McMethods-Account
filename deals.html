@@ -72,8 +72,33 @@
         color: rgb(170, 135, 90);
         font-family: 'Montserrat', sans-serif;
     }
+
+    /* Hide AuthPro badge */
+    *[class*="authpro"], *[id*="authpro"] {
+      display: none !important;
+    }
+
+    /* Hide AuthPro bar by targeting link */
+    a[href*="authpro.com"] {
+      display: none !important;
+    }
+    a[href*="authpro.com"] > * {
+      display: none !important;
+    }
+    a[href*="authpro.com"]::before,
+    a[href*="authpro.com"]::after {
+      display: none !important;
+    }
   </style>
-</html>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const authLink = document.querySelector('a[href*="authpro.com"]');
+      if (authLink && authLink.parentElement) {
+        authLink.parentElement.style.display = 'none';
+      }
+    });
+  </script>
+</head>
 <body>
     <div class="container">
         <img src="images/mcmethods26.png" alt="McMethods Logo" class="logo">
@@ -91,3 +116,4 @@
             <sub>2x per person per day<br>Exp:11/1</sub>
         </div>
 </body>
+</html>

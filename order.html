@@ -64,6 +64,23 @@
     a.button:hover {
       background: #fdd835; /* Slightly lighter yellow on hover */
     }
+
+    /* Hide AuthPro badge */
+    *[class*="authpro"], *[id*="authpro"] {
+      display: none !important;
+    }
+
+    /* Hide AuthPro bar by targeting link */
+    a[href*="authpro.com"] {
+      display: none !important;
+    }
+    a[href*="authpro.com"] > * {
+      display: none !important;
+    }
+    a[href*="authpro.com"]::before,
+    a[href*="authpro.com"]::after {
+      display: none !important;
+    }
     .button-container button {
       background: #fbc02d; /* McDonald's golden yellow */
       color: #b71c1c;       /* McDonald's deep red */
@@ -130,6 +147,14 @@
       
     }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const authLink = document.querySelector('a[href*="authpro.com"]');
+      if (authLink && authLink.parentElement) {
+        authLink.parentElement.style.display = 'none';
+      }
+    });
+  </script>
 </head>
 <body>
   <div class="button-container">
