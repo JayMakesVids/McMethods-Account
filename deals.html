@@ -89,6 +89,53 @@
     a[href*="authpro.com"]::after {
       display: none !important;
     }
+
+    .button-container button {
+      background: #fbc02d; /* McDonald's golden yellow */
+      color: #b71c1c;       /* McDonald's deep red */
+      padding: 0.9rem 2rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 2rem;
+      border-radius: 25px; /* Squircle approximation */
+      color: white;
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+      text-align: center;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
   </style>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -106,8 +153,8 @@
         <b><h2>User-Exclusive Deals:</h2></b></p>
         <div class="rewards">
             <img src="images/mcchicken.png" alt="McChicken" style="width:100px; height:auto;">
-            <p>Get a free McChicken, thanks for signing up!</p>
-            <sub>1x per person, no purchase necessary<br>Exp:11/5</sub>
+            <p>Free McChicken, no purchase necessary, thanks for signing up!</p>
+            <sub>1x per person<br>Exp:11/5</sub>
             
         </div>
         <div class="rewards">
@@ -116,14 +163,30 @@
             <sub>2x per person per day<br>Exp:11/1</sub>
         </div>
         <div class="rewards">
-          <img src="images/siriusxm.png" alt="SiriusXM with $8.00 order" style="width:100px; height: auto;">
-          <p>Get 4 months of SiriusXM on an $8.00+ order</p>
-          <sub>1x per person<br>Exp:1/1/2026</sub>
+          <img src="images/applepie.png" alt="Apple Pie" style="width:100px; height: auto;">
+          <p>Free Apple Pie when you buy a Medium Fry</p>
+          <sub>2x per person per day<br>Exp:11/1</sub>
         </div>
-
-        <div class="info">
-          <h2>Looking for more Deals?</h2>
-          <p>Check our <a href="https://www.mcmethods.me/deals" style="text-decoration: none; color: rgb(170, 135, 90)">Sitewide Deals</a> for more deals. We are constantly changing the deals, check back soon!</p>
+        
+        <div class="button-container">
+          <button id="more-rwds">More Rewards</button>
+          <a href="https://www.mcmethods.me/deals" class="button">View Sitewide Deals</a>
+        </div>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>More Rewards</h2>
+            <p>Looking for more rewards and cheap food? McMethods has your back--and lunch.</p>
+            <p><br>McDonalds is currently running a Monopoly Promotion. Purchase one of the few items below from McMethods to receive 2 redemption codes to potentially win free food or a 2026 Jeep. Learn more at <a href="https://mcdonalds.com" style="text-decoration: none;">McDonalds</a>.</p>
+          </div>
         </div>
 </body>
 </html>
+<script>
+  const btn = document.getElementById('more-rwds');
+  const modal = document.getElementById('modal');
+  const closeBtn = document.querySelector('.close-btn');
+  btn.addEventListener('click', () => modal.style.display = 'flex');
+  closeBtn.addEventListener('click', () => modal.style.display = 'none');
+  modal.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+</script>
