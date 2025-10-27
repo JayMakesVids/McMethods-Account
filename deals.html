@@ -124,6 +124,8 @@
       width: 90%;
       position: relative;
       text-align: center;
+      max-height: 80vh;
+      overflow-y: auto;
     }
 
     .close-btn {
@@ -135,6 +137,19 @@
       color: white;
       font-size: 2rem;
       cursor: pointer;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .image-grid img {
+      width: 100px;
+      height: auto;
+      border-radius: 10px;
     }
   </style>
   <script>
@@ -170,14 +185,24 @@
         
         <div class="button-container">
           <button id="more-rwds">More Rewards</button>
-          <a href="https://www.mcmethods.me/deals" class="button">View Sitewide Deals</a>
+          <a href="https://www.mcmethods.me/deals" target="_blank" class="button">View Sitewide Deals</a>
         </div>
         <div id="modal" class="modal">
           <div class="modal-content">
             <button class="close-btn">&times;</button>
             <h2>More Rewards</h2>
             <p>Looking for more rewards and cheap food? McMethods has your back--and lunch.</p>
-            <p><br>McDonalds is currently running a Monopoly Promotion. Purchase one of the few items below from McMethods to receive 2 redemption codes to potentially win free food or a 2026 Jeep. Learn more at <a href="https://mcdonalds.com" style="text-decoration: none;">McDonalds</a>.</p>
+            <p><br>McDonalds is currently running a Monopoly Promotion; purchase an item for 1 code. We're doing it different--purchase one of the few items below from McMethods to receive 2 redemption codes to potentially win free food and more. Learn more at <a href="https://mcdonalds.com" style="text-decoration: none;">McDonalds</a>.</p>
+            <div class="image-grid">
+              <img src="images/Steak Egg & Cheese McGriddle.png" alt="Steak Egg & Cheese Biscuit">
+              <img src="images/Steak Egg & Cheese Biscuit.png" alt="Steak Egg & Cheese Biscuit">
+              <img src="images/mcgriddle.png" alt="McGriddle">
+              <img src="images/hashbrown.png" alt="Hashbrown">
+              <img src="images/med-fries.png" alt="Medium Fries">
+              <img src="images/mcchicken.png" alt="McChicken or Hot 'n Spicy McChicken">
+              <img src="images/cheeseburger.png" alt="Cheeseburger">
+              <img src="images/applepie.png" alt="Apple Pie">
+            </div>
           </div>
         </div>
 </body>
