@@ -134,6 +134,16 @@
     </div>
   </div>
 
+  <!-- Create Account Modal Overlay -->
+  <div id="create-account-modal" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-button" onclick="hideCreateAccountModal()">&times;</span>
+      <h2>McMethods Alert</h2>
+      <p>Account Creation is currently on manual review. Accounts created may take up to 48 hours to be activated.</p>
+      <a class="button" href="signup.html">Proceed</a>
+    </div>
+  </div>
+
   <div class="container">
     <img src="images/mcmethods26.png" alt="McMethods Logo" class="logo">
 
@@ -149,7 +159,7 @@
     <!-- Buttons -->
     <div class="button-container">
       <a class="button" href="login.html" style="text-align: center;">Log in</a>
-      <a class="button" href="signup.html">Create Account</a>
+      <a class="button" onclick="showCreateAccountModal()">Create Account</a>
       <a class="button" href="">Reset Password</a>
     </div>
   </div>
@@ -179,6 +189,24 @@
     modal.addEventListener('click', function(event) {
       if (event.target === modal) {
         hideModal();
+      }
+    });
+
+    // Create Account Modal functions
+    const createAccountModal = document.getElementById('create-account-modal');
+
+    function showCreateAccountModal() {
+      createAccountModal.style.display = 'flex';
+    }
+
+    function hideCreateAccountModal() {
+      createAccountModal.style.display = 'none';
+    }
+
+    // Close create account modal when clicking outside the modal content
+    createAccountModal.addEventListener('click', function(event) {
+      if (event.target === createAccountModal) {
+        hideCreateAccountModal();
       }
     });
   </script>
