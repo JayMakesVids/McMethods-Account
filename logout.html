@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login - McMethods</title>
+  <title>Success! - McMethods</title>
   <!-- Montserrat font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -71,16 +71,58 @@
     button:hover {
       background: #f9a825; /* Darker yellow on hover */
     }
+
+    /* Hide AuthPro badge */
+    *[class*="authpro"], *[id*="authpro"] {
+      display: none !important;
+    }
+
+    /* Hide AuthPro bar by targeting link */
+    a[href*="authpro.com"] {
+      display: none !important;
+    }
+    a[href*="authpro.com"] > * {
+      display: none !important;
+    }
+    a[href*="authpro.com"]::before,
+    a[href*="authpro.com"]::after {
+      display: none !important;
+    }
+
     </style>
 </head>
 <body>
   <div class="container">
     <img src="images/mcmethods26.png" alt="McMethods Logo" class="logo">
 
-    <h1>Login to McMethods</h1>
-    <iframe src="https://www.authpro.com/auth/McMethods/" style="width:100%; height:400px; border-radius:15%;"></iframe>
-      <button href="signup.html"><a href="signup.html" style="text-decoration: none; color: maroon;"><b>Create Account</b></a></button>
-      <button href="index.html"><a href="index.html" style="text-decoration: none; color: maroon;"><b>Return Home</b></a></button>
-    </form>
+    <h1>Logout Successful</h1>
+      <div class="Order">
+        <button href="index.html"><a href="index.html" style="text-decoration: none; color: maroon;">Return Home</a></button>
+        <button href="login.html"><a href="login.html" style="text-decoration: none; color: maroon;">Log in</a></button>
+      </div>
+   
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const authLink = document.querySelector('a[href*="authpro.com"]');
+      if (authLink && authLink.parentElement) {
+        authLink.parentElement.style.display = 'none';
+      }
+    });
+  </script>
   </div>
+  <style>
+    /* Position the invisible "Protected by" bar at the top so it doesn't interfere */
+    a[href*="authpro.com"], a[href*="authpro.com"] > *, a[href*="authpro.com"]::before, a[href*="authpro.com"]::after {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 20px !important;
+      overflow: hidden !important;
+      pointer-events: none !important;
+      z-index: 9999 !important;
+      opacity: 0 !important;
+    }
+  </style>
+</body>
 </html>
