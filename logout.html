@@ -15,7 +15,6 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: linear-gradient(135deg, #b71c1c, #d32f2f, #fbc02d); /* McDonald's red → yellow */
     }
 
     .container {
@@ -93,24 +92,54 @@
 </head>
 <body>
   <div class="container">
-    <img src="images/mcmethods26.png" alt="McMethods Logo" class="logo">
 
     <h1>Logout Successful</h1>
       <div class="Order">
-        <button href="index.html"><a href="index.html" style="text-decoration: none; color: maroon;">Return Home</a></button>
-        <button href="login.html"><a href="login.html" style="text-decoration: none; color: maroon;">Log in</a></button>
+        <a href="index.html" class="button">Return Home</a>
+        <a href="login.html" class="button">Login</a>
       </div>
-   
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const authLink = document.querySelector('a[href*="authpro.com"]');
-      if (authLink && authLink.parentElement) {
-        authLink.parentElement.style.display = 'none';
-      }
-    });
-  </script>
-  </div>
+
   <style>
+    a.button {
+      text-decoration: none;
+      background: #fbc02d; /* McDonald's golden yellow */
+      color: #b71c1c;       /* McDonald's deep red */
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: 0.25s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+      text-align: center;
+      display: inline-block;
+    }
+
+    a.button:hover {
+      background: #ffd54f;
+      transform: scale(1.05);
+    }
+
+    button.button {
+      text-decoration: none;
+      background: #fbc02d; /* McDonald's golden yellow */
+      color: #b71c1c;       /* McDonald's deep red */
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: 0.25s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+      text-align: center;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+    }
+
+    button.button:hover {
+      background: #ffd54f;
+      transform: scale(1.05);
+    }
+
     /* Position the invisible "Protected by" bar at the top so it doesn't interfere */
     a[href*="authpro.com"], a[href*="authpro.com"] > *, a[href*="authpro.com"]::before, a[href*="authpro.com"]::after {
       position: fixed !important;

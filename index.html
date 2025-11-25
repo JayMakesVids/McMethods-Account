@@ -184,7 +184,10 @@
       <h2>User Settings</h2>
       <button class="button" id="edit-profile-btn">Edit Profile</button>
       <iframe id="edit-profile-iframe" src="" style="display: none; width: 100%; height: 400px; border: none; margin-top: 1rem;"></iframe>
+      <button class="button" id="logout-btn">Logout</button>
+      <iframe id="logout-frame" src="" style="display: none; width:100%; height:400px; border: none; margin-top: 1rem;"></iframe>
     </div>
+
   </div>
 
   <div class="container">
@@ -258,6 +261,8 @@
     const userSettingsBtn = document.getElementById('user-settings-btn');
     const editProfileBtn = document.getElementById('edit-profile-btn');
     const editProfileIframe = document.getElementById('edit-profile-iframe');
+    const logoutBtn = document.getElementById('logout-btn');
+    const logoutFrame = document.getElementById('logout-frame');
 
     function showUserSettingsModal() {
       userSettingsModal.style.display = 'flex';
@@ -291,6 +296,19 @@
       } else {
         editProfileIframe.style.display = 'none';
         editProfileIframe.src = '';
+        modalContent.classList.remove('expanded');
+      }
+    });
+
+    logoutBtn.addEventListener('click', function() {
+      const modalContent = userSettingsModal.querySelector('.modal-content');
+      if (logoutFrame.style.display === 'none') {
+        logoutFrame.src = 'logout.html';
+        logoutFrame.style.display = 'block';
+        modalContent.classList.add('expanded');
+      } else {
+        logoutFrame.style.display = 'none';
+        logoutFrame.src = '';
         modalContent.classList.remove('expanded');
       }
     });
