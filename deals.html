@@ -68,6 +68,28 @@
         color: rgba(245, 197, 134);
         font-family: 'Montserrat', sans-serif;
     }
+
+    /* Placeholder image for redeem coupon */
+    .rewards {
+      position: relative;
+    }
+    .redeem-placeholder {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      width: 40px;
+      height: 40px;
+      opacity: 0.8;
+      pointer-events: none;
+      border-radius: 5px;
+      background-color: #fbc02d; /* McDonald's golden yellow placeholder background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      font-weight: bold;
+      color: #b71c1c; /* McDonald's deep red */
+    }
     .rewards sub {
         color: rgb(170, 135, 90);
         font-family: 'Montserrat', sans-serif;
@@ -96,6 +118,17 @@
       padding: 0.9rem 2rem;
       border-radius: 10px;
       font-size: 1.2rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+    }
+
+.redeem-btn {
+      background: #fbc02d;
+      color: #b71c1c;
+      padding: 0.3rem 2rem !important;
+      border-radius: 5px !important;
+      font-size: 0.9rem !important;
       font-weight: 700;
       border: none;
       cursor: pointer;
@@ -166,47 +199,69 @@
         <img src="images/mcmethods26.png" alt="McMethods Logo" class="logo">
     
         <b><h2>Deals:</h2></b></p>
-        <div class="rewards">
+        <div class="rewards" data-name="$6.00 McMethods Meal Deal" data-img="images/mcmethodsmealdeal.png" data-info="4x per person per day<br>Exp:1/30/2026<br><br>Screenshot, print, or show this to a McMethods employee to use this deal.">
           <img src="images/mcmethodsmealdeal.png" alt="$6.00 McMethods Meal Deal" style="width: 100px; height:auto;">
           <p>$6.00 McMethods Meal Deal</p>
           <sub>4x per person per day<br>Exp:1/30/2026</sub>
+          <button class="redeem-btn">Redeem</button>
+          <div class="redeem-placeholder" title="Placeholder"></div>
         </div>
-        <div class="rewards">
+        <div class="rewards" data-name="$6.00 McMethods Breakfast Meal Deal" data-img="images/mcmethodsbreakfastmealdeal.png" data-info="4x per person per day<br>Exp:1/30/2026<br><br>Screenshot, print, or show this to a McMethods employee to use this deal.">
           <img src="images/mcmethodsbreakfastmealdeal.png" alt="$6.00 McMethods Breakfast Meal Deal" style="width:100px; height:auto;">
           <p>$6.00 McMethods Breakfast Meal Deal</p>
           <sub>4x per person per day<br>Exp:1/30/2026</sub>
+          <button class="redeem-btn">Redeem</button>
+          <div class="redeem-placeholder" title="Placeholder"></div>
         </div>
-        <div class="rewards">
+        <div class="rewards" data-name="$7.00 2 Hashbrowns and 2 Sausage McGriddles" data-img="images/tray (1).png" data-info="1x per person<br>Exp:1/30/2026<br><br>Screenshot, print, or show this to a McMethods employee to use this deal.">
           <img src="images/tray (1).png" alt="$7.00 2 Hashbrowns and 2 Sausage McGriddles" style="width:100px; height:auto;">
           <p>$7.00 2 Hashbrowns and 2 Sausage McGriddles</p>
           <sub>1x per person<br>Exp:1/30/2026</sub>
+          <button class="redeem-btn">Redeem</button>
+          <div class="redeem-placeholder" title="Placeholder"></div>
         </div>
-        <div class="rewards">
+        <div class="rewards" data-name="50% off Apple Pie" data-img="images/applepie.png" data-info="1x per person<br>Exp:1/30/2026<br><br>Screenshot, print, or show this to a McMethods employee to use this deal.">
           <img src="images/applepie.png" alt="Apple Pie" style="width:100px; height:auto;">
           <p>50% off Apple Pie</p>
           <sub>1x per person<br>Exp:1/30/2026</sub>
+          <button class="redeem-btn">Redeem</button>
+          <div class="redeem-placeholder" title="Placeholder"></div>
         </div>
-        <div class="rewards">
+        <div class="rewards" data-name="50% off Sausage McGriddle" data-img="images/mcgriddle.png" data-info="1x per person<br>Exp:1/30/2026<br><br>Screenshot, print, or show this to a McMethods employee to use this deal.">
           <img src="images/mcgriddle.png" alt="Sausage McGriddle" style="width:100px; height:auto;">
           <p>50% off Sausage McGriddle</p>
           <sub>1x per person<br>Exp:1/30/2026</sub>
+          <button class="redeem-btn">Redeem</button>
+          <div class="redeem-placeholder" title="Placeholder"></div>
         </div>
-        <div class="rewards">
-          <img src="images/med-fries.png" alt="Medium Fries" style="width:100px; height:auto;">
-          <p>$1 Medium Fries with purchase of McChicken</p>
+        <div class="rewards" data-name="50% off McChicken" data-img="images/mcchicken.png" data-info="1x per person<br>Exp:1/30/2026<br><br>Screenshot, print, or show this to a McMethods employee to use this deal.">
+          <img src="images/mcchicken.png" alt="McChicken" style="width:100px; height:auto;">
+          <p>50% off McChicken</p>
           <sub>1x per person<br>Exp:1/30/2026</sub>
+          <button class="redeem-btn">Redeem</button>
+          <div class="redeem-placeholder" title="Placeholder"></div>
         </div>
-        <div class="rewards">
-            <img src="images/cheeseburger.png" alt="Cheeseburger" style="width:100px; height:auto;">
-            <p>Free Cheeseburger, no purchase necessary, thanks for signing up!</p>
-            <sub>1x per person<br>Exp:12/12</sub>
+        <div class="rewards" data-name="$1 Medium Fries when you purchase a McChicken" data-img="images/med-fries.png" data-info="1x per person<br>Exp:1/30/2026<br><br>Screenshot, print, or show this to a McMethods employee to use this deal.">
+          <img src="images/med-fries.png" alt="Medium Fries" style="width: 100px; height:auto;">
+          <p>$1 Medium Fries when you purchase a McChicken</p>
+          <sub>1x per person<br>Exp:1/30/2026</sub>
+          <button class="redeem-btn">Redeem</button>
+          <div class="redeem-placeholder" title="Placeholder"></div>
         </div>
-        <div class="rewards">
-          <img src="images/Quarter Pounder with Cheese.png" alt="Quarter Pounder with Cheese" style="width: 100px; height:auto;">
+        <div class="rewards" data-name="Free Cheeseburger, no purchase necessary, thanks for signing up!" data-img="images/cheeseburger.png" data-info="1x per person<br>Exp:12/12<br><br>Screenshot, print, or show this to a McMethods employee to use this deal.">
+          <img src="images/cheeseburger.png" alt="Cheeseburger" style="width:100px; height:auto;">
+          <p>Free Cheeseburger, no purchase necessary, thanks for signing up!</p>
+          <sub>1x per person<br>Exp:12/12</sub>
+          <button class="redeem-btn">Redeem</button>
+          <div class="redeem-placeholder" title="Placeholder"></div>
+        </div>
+        <div class="rewards" data-name="$2.00 Quarter Pounder with Cheese" data-img="images/Quarter Pounder with Cheese.png" data-info="1x per person<br>Exp:11/30<br><br>Screenshot, print, or show this to a McMethods employee to use this deal.">
+          <img src="images/Quarter Pounder with Cheese.png" alt="Quarter Pounder with Cheese" style="width:100px; height:auto;">
           <p>$2.00 Quarter Pounder with Cheese</p>
           <sub>1x per person<br>Exp:11/30</sub>
+          <button class="redeem-btn">Redeem</button>
+          <div class="redeem-placeholder" title="Placeholder"></div>
         </div>
-        
         <b><h2>Bonuses</h2></b>
         <div class="rewards">
           <p>$3.00 voucher when you spend $20 or more within a week.</p>
@@ -223,6 +278,20 @@
             <button class="close-btn">&times;</button>
           </div>
         </div>
+        <!-- Redeem Modal -->
+          <div id="redeem-modal" class="modal">
+          <div class="modal-content redeem-modal-content">
+            <button class="close-btn redeem-close-btn">&times;</button>
+            <div class="redeem-modal-body">
+              <img src="" alt="Deal Image" class="redeem-image">
+              <div class="redeem-details">
+                <h2 class="redeem-title"></h2>
+                <p class="redeem-info"></p>
+              </div>
+            </div>
+            <a href="order.html" style="text-decoration:none;" class="redeem-btn redeem-order-btn">Order Now</a>
+          </div>
+        </div>
 </body>
 </html>
 <script>
@@ -232,4 +301,111 @@
   btn.addEventListener('click', () => modal.style.display = 'flex');
   closeBtn.addEventListener('click', () => modal.style.display = 'none');
   modal.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+
+  // Redeem modal functionality
+  const redeemModal = document.getElementById('redeem-modal');
+  const redeemCloseBtn = document.querySelector('.redeem-close-btn');
+  const redeemImage = document.querySelector('.redeem-image');
+  const redeemTitle = document.querySelector('.redeem-title');
+  const redeemInfo = document.querySelector('.redeem-info');
+
+  document.querySelectorAll('.redeem-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const dealDiv = e.target.closest('.rewards');
+      const imgSrc = dealDiv.getAttribute('data-img');
+      const name = dealDiv.getAttribute('data-name');
+      const info = dealDiv.getAttribute('data-info');
+
+      redeemImage.src = imgSrc;
+      redeemImage.alt = name;
+      redeemTitle.textContent = name;
+      redeemInfo.innerHTML = info;
+
+      redeemModal.style.display = 'flex';
+    });
+  });
+
+  redeemCloseBtn.addEventListener('click', () => redeemModal.style.display = 'none');
+  redeemModal.addEventListener('click', (e) => { if (e.target === redeemModal) redeemModal.style.display = 'none'; });
 </script>
+<style>
+  /* Redeem modal specific styles */
+  .redeem-modal-content {
+    display: flex;
+    gap: 1rem;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: left;
+  }
+
+  .redeem-order-btn {
+    align-self: flex-start;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+
+  .redeem-modal-body {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .redeem-image {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    flex-shrink: 0;
+  }
+
+  .redeem-details {
+    flex-grow: 1;
+  }
+
+  .redeem-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .redeem-info {
+    font-size: 1.2rem;
+    white-space: pre-line;
+  }
+
+  /* Ensure print-friendly styles */
+  @media print {
+    body {
+      background: white !important;
+      color: black !important;
+      -webkit-print-color-adjust: exact;
+    }
+    .modal {
+      position: static !important;
+      width: 100% !important;
+      height: auto !important;
+      background: white !important;
+      box-shadow: none !important;
+      overflow: visible !important;
+      display: block !important;
+      max-height: none !important;
+    }
+    .modal-content, .redeem-modal-content {
+      background: white !important;
+      color: black !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      max-width: 100% !important;
+      text-align: left !important;
+    }
+    .redeem-image {
+      width: 150px !important;
+    }
+    .close-btn, .redeem-close-btn {
+      display: none !important;
+    }
+    .redeem-info {
+      white-space: normal !important;
+    }
+  }
+</style>
