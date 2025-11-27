@@ -350,6 +350,9 @@
       redeemTitle.textContent = name;
       redeemInfo.innerHTML = info;
 
+      // Set the deal name in the Order Now link
+      document.querySelector('.redeem-order-btn').href = 'order.html?deal=' + encodeURIComponent(name);
+
       redeemModal.style.display = 'flex';
     });
   });
@@ -360,10 +363,13 @@
   // Terms modal functionality
   const termsModal = document.getElementById('terms-modal');
   const termsCloseBtn = document.querySelector('.terms-close-btn');
+  const termsIframe = termsModal.querySelector('iframe');
 
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('view-terms-link')) {
       e.preventDefault();
+      // Reset the iframe to the original link
+      termsIframe.src = 'https://www.mcmethods.me/deals/terms';
       termsModal.style.display = 'flex';
     }
   });

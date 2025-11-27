@@ -153,6 +153,15 @@
       if (authLink && authLink.parentElement) {
         authLink.parentElement.style.display = 'none';
       }
+
+      // Get the deal parameter from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const deal = urlParams.get('deal');
+      if (deal) {
+        // Update the iframe src to include the deal parameter
+        const iframe = document.querySelector('.iframes');
+        iframe.src = 'https://anonymous-chat-room-eight.vercel.app/McMethods?deal=' + encodeURIComponent(deal);
+      }
     });
   </script>
 </head>
